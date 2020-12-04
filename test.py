@@ -13,10 +13,10 @@ def test_market_client():  # Create the market client instance and get the lates
     market_client = MarketClient()
     list_obj = market_client.get_candlestick("btcusdt", CandlestickInterval.MIN5, 20)
     print(len(list_obj))
-    # LogInfo.output_list(list_obj)
-    # print(type(list_obj[0]))
-    # for item in list_obj:
-    #     print(ts2str(item.id))
+    LogInfo.output_list(list_obj)
+    print(type(list_obj[0]))
+    for item in list_obj:
+        print(ts2str(item.id))
 
 if __name__ == "__main__":
     # test_generic_client()
